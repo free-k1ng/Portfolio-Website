@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            /* Dark blue / white diagonal striped frame */
+            border: 25px solid transparent;
+            border-image: repeating-linear-gradient(
+                135deg,
+                #0b1f3a 0px,
+                #0b1f3a 15px,
+                #ffffff 15px,
+                #ffffff 30px
+            ) 25;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+           ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            min-height: calc(100vh - 50px);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* =========================
+           TOP TEXT AREA
+           ========================= */
+
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        /* =========================
+           3 x 3 BUTTON GRID
+           ========================= */
+
+        .grid {
+            flex: 1;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+        .grid-button {
+            background-color: #0b1f3a;
+            color: white;
+
+            min-height: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+
+            border: 2px solid #163b6d;
+            border-radius: 5px;
+
+            transition: background-color 0.2s ease,
+                        color 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+        /* Hover effect */
+        .grid-button:hover {
+            background-color: #808080;
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        /* =========================
+           BOTTOM TEXT AREA
+           ========================= */
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            color: #cccccc;
+        }
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 700px) {
+            body {
+                border-width: 15px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .grid-button {
+                min-height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TOP TEXT -->
+        <header class="header">
+            <h1>Francesco Massaro's Web + Desktop Apps</h1>
+            <p>
+                Welcome to my portfolio. Explore my work and projects below.
+            </p>
+        </header>
+
+
+        <!-- 3 x 3 WEBSITE GRID -->
+        <main class="grid">
+
+            <a href="https://free-k1ng.github.io/Xproject/" class="grid-button">
+                XProject
+            </a>
+
+            <a href="https://free-k1ng.github.io/ComputerForceSample/" class="grid-button">
+                Computer Force Sample
+            </a>
+
+            <a href="https://free-k1ng.github.io/bryanscafe/" class="grid-button">
+                Bryan's Cafe
+            </a>
+
+            <a href="https://github.com/free-k1ng/Koala-Website" class="grid-button">
+                Koala Website Repo
+            </a>
+
+            <a href="https://free-k1ng.github.io/One-digital-site/index.html#" class="grid-button">
+                Koala T-Shirts
+            </a>
+
+            <a href="https://mega.nz/file/6N0RTT7a#aWoKA_Ba0ISDJASYD1PS_HSRfjKPyj7FgYE2bJI2UDI" class="grid-button">
+                Chess - Python
+            </a>
+
+        </main>
+
+
+        <!-- BOTTOM TEXT -->
+        <footer class="footer">
+            <p>
+                Contact me: francescomassaro03@gmail.com
+            </p>
+            <p>
+                © 2026 Francesco Massaro
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
